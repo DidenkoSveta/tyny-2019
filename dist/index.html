@@ -31,8 +31,33 @@
          </div>
       </header>
 <main>
-
+<section class="spikers">
+   <div class="spicers__container">
+      
+   </div>
+</section>
 </main>
+<section class="contact__form">
+   <div class="contact__form-container">
+      <h3 class="contact__form-title">Отправить сообщение</h3>
+      <form class="contact__form-grid" action="action_page.php" enctype="multipart/form-data" method="post">
+         <div class="contact__two-fields">
+            <input class="contact__input" id="contact-name" type="text" name="contactname" autocomplete="on"
+               placeholder="Ваше имя">
+            <label class="contact__label" for="contact-name"></label>
+
+            <input class="contact__input" id="contact-email" type="text" name="contacttel" autocomplete="on"
+               placeholder="Email">
+            <label class="contact__label" for="contact-email"></label>
+         </div>
+
+         <textarea class="contact__textarea" id="subject" name="subject" placeholder="Ваше сообщение"></textarea>
+         <label class="contact__label" for="subject"></label>
+
+         <input class="contact__button" type="submit" value="Отправить" name="submitform">
+      </form>
+   </div>
+</section>
 <footer class="footer">
    <div class="footer__container container">
       <div class="footer__contact-list">
