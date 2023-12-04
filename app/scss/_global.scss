@@ -11,10 +11,36 @@ a {
 body {
    background: $white;
    color: $blue;
+   font-family: 'HelveticaNeueCyr';
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100vh;
 }
 
 header {
-   height: 100px;
+   display: flex;
+   justify-content: center;
+   height: 66px;
    width: 100vw;
-   background: $blue;
+   background: $white;
+}
+
+.container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 1240px;
+   padding: 12px 50px;
+}
+
+
+footer {
+   width: 100vw;
+   background-color: $blue;
+   color: $white;
+   padding-bottom: 160px;
 }

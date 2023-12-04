@@ -3,9 +3,54 @@
 @import "reset";
 @import "global";
 
+.header__logo {
+   font-size: 29px;
 
+}
 
+.header__menu {
+   &-list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 543px;
+   }
+}
 
+.header__menu-link {
+   color: $blue;
+   font-weight: normal;
+}
+
+.header__menu-link:hover {
+   color: $white-blue;
+}
+
+.header__register-link {
+   color: $white-blue;
+   padding: 8px 30px;
+   border: solid 1px $white-blue;
+}
+
+.header__register-link:hover {
+   color: $white;
+   background: $white-blue;
+}
+
+.header__social {
+   display: flex;
+   gap: 10px;
+}
+
+.header__menu-list::before {
+   content: "";
+   display: block;
+   width: 1px;
+   height: 42px;
+   background-color: #C4C4C4;
+   margin-right: -24px; 
+ }
 
 
 
