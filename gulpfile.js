@@ -105,7 +105,7 @@ function watching() {
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/*.html'], includeHTML).on('change', browserSync.reload);
-  watch(['app/templates-parts/**/*.html'], includeHTML);
+  watch(['app/templates-parts/**/*.html'], includeHTML).on('change', browserSync.reload);
   watchImages();
 }
 

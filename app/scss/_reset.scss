@@ -7,6 +7,8 @@ html{
 *::after,
 *::before{
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 ul[class],
@@ -59,11 +61,11 @@ a{
 input:-webkit-autofill, input:-webkit-autofill:focus, input:-webkit-autofill:hover {
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
-  -webkit-text-fill-color: $orange;
+  -webkit-text-fill-color: $blue;
 }
 
 input:autofill, input:autofill:focus, input:autofill:hover {
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
-  -webkit-text-fill-color: $orange;
+  -webkit-text-fill-color: $blue;
 }
