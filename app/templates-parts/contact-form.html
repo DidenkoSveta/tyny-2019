@@ -1,21 +1,23 @@
 <section class="contact__form">
    <div class="contact__form-container">
       <h3 class="contact__form-title">Отправить сообщение</h3>
-      <form class="contact__form-grid" action="action_page.php" enctype="multipart/form-data" method="post">
+      <form class="contact__form-grid" action="action_page.php" method="post" novalidate>
          <div class="contact__two-fields">
             <input class="contact__input" id="contact-name" type="text" name="contactname" autocomplete="on"
-               placeholder="Ваше имя">
+               placeholder="Ваше имя" required>
             <label class="contact__label" for="contact-name"></label>
 
-            <input class="contact__input" id="contact-email" type="text" name="contacttel" autocomplete="on"
-               placeholder="Email">
+            <input class="contact__input" id="contact-email" type="email" name="contactemail" autocomplete="on"
+               placeholder="Email" required>
             <label class="contact__label" for="contact-email"></label>
          </div>
 
-         <textarea class="contact__textarea" id="subject" name="subject" placeholder="Ваше сообщение"></textarea>
+         <textarea class="contact__textarea" id="subject" name="subject" placeholder="Ваше сообщение"
+            required></textarea>
          <label class="contact__label" for="subject"></label>
 
-         <input class="contact__button" type="submit" value="Отправить" name="submitform">
+         <input class="contact__button" type="submit" value="Отправить">
       </form>
+
    </div>
 </section>

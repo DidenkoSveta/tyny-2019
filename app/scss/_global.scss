@@ -64,6 +64,12 @@ footer {
    padding: 139px 100px 100px;
 }
 
+.contact__input:invalid,
+.contact__textarea:invalid {
+  border: 2px solid red;
+}
+
+
 .promo {
    position: relative;
    width: 100vw;

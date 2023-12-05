@@ -76,6 +76,13 @@ function styles() {
     .pipe(browserSync.stream());
 }
 
+// Функция для копирования шрифтов
+function fonts() {
+  return src('app/fonts/**/*') // выбираем все файлы в папке app/fonts
+    .pipe(dest('dist/fonts')); // копируем их в dist/fonts
+}
+
+
 // Функция для наблюдения за изменениями в файлах
 function watching() {
   watch(['app/scss/**/*.scss'], styles);
@@ -88,6 +95,6 @@ function watching() {
 }
 
 // Сборка проекта
-exports.build = series(cleanDist, parallel(images, includeHTML, styles, scripts));
+exports.build = series(cleanDist, parallel(images, includeHTML, styles, scripts, fonts));
 // Задача по умолчанию
 exports.default = parallel(initBrowserSync, watching);
