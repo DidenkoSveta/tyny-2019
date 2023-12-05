@@ -639,17 +639,6 @@
    }
 }
 
-@media (max-width: 767px) {}
-.footer__container {
-   justify-content: center;
-}
-
-@media (max-width: 767px) {}
-.footer__contact-list ul {
-   display: flex;
-   flex-direction: column;
-   gap: 6px;
-}
 
 @media (max-width: 767px) {
    .footer__contact-item:nth-child(1) {
