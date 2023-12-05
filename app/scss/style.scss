@@ -6,17 +6,19 @@
 
 .header__logo {
    font-size: 29px;
+   white-space: nowrap;
 }
 
 .header__logo-mb {
    display: none;
+   font-size: 29px;
+   white-space: nowrap;
 }
 
 .header__menu {
    display: flex;
    justify-content: space-between;
-   width: 900px;
-   transform:translateX(-48px);
+   width: 950px;
    &-list {
       display: flex;
       justify-content: space-between;
@@ -83,7 +85,7 @@
    z-index: 11;
    cursor: pointer;
    background-color: $white;
-   right: 28px;
+   right: 48px;
 }
 
 .header__burger {
@@ -216,7 +218,7 @@
    color: $white;
    font-size: 60px;
    font-style: normal;
-   font-weight: 300;
+   font-weight: 200;
    line-height: 140%;
 }
 
@@ -311,6 +313,10 @@
    line-height: 130%;
    letter-spacing: 1px;
    max-width: 520px;
+}
+
+.promo__image-mb {
+   display: none;
 }
 
 .promo__additional-text {
@@ -423,10 +429,11 @@
 
    .swiper-button-prev {
       transform: rotate(180deg);
+      left: 50px;
    }
 
    .swiper-button-next {
-      right: 30px;
+      right: 80px;
    }
 
    .swiper-button-next:hover,
