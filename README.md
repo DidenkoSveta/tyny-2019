@@ -26,6 +26,11 @@
 - **Field Highlighting**: Highlight invalid fields upon submission.
 - **Console Logging**: If the fields are valid, log the collected data to the console.
 
+## Live Demo:
+
+A completed version of the site can be viewed at: [https://didenkosveta.github.io/tyny-2019/dist/](https://didenkosveta.github.io/tyny-2019/dist/)
+
+
 ---
 
 # Техническое Задание
@@ -54,3 +59,7 @@
   - **Сообщение**: Это обязательное поле.
 - **Подсветка полей**: При отправке формы невалидные поля должны подсвечиваться.
 - **Логирование в консоль**: В случае валидности полей необходимо вывести собранные данные в консоль.
+
+## Готовый Вариант:
+
+Готовый вариант сайта вы можете посмотреть по ссылке: [https://didenkosveta.github.io/tyny-2019/dist/](https://didenkosveta.github.io/tyny-2019/dist/)
