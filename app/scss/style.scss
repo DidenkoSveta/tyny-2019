@@ -417,12 +417,10 @@
          height: 85px;
          width: 28px;
          opacity: 0.6;
-         
-         // transform: translateY(50px);
       }
    }
 
-   .swiper-button-prev, 
+   .swiper-button-prev,
    .swiper-button-next {
       margin-top: 20px;
    }
@@ -495,5 +493,49 @@
 .swiper-button-prev {
    animation: swiper-button-blink 1.5s ease-in-out infinite;
 }
+
+@keyframes popIn {
+   from {
+     transform: scale(0);
+     opacity: 0;
+   }
+   to {
+     transform: scale(1);
+     opacity: 1;
+   }
+ }
+ 
+ @keyframes float {
+   0%, 100% {
+     transform: translateY(0);
+   }
+   50% {
+     transform: translateY(-10px);
+   }
+ }
+ 
+ .promo__logos img {
+   animation: popIn 0.6s ease-out forwards, float 3s ease-in-out infinite;
+   opacity: 0; 
+   transform: scale(0); 
+   animation-delay: var(--animation-delay); 
+ }
+
+ .promo__logo-1 {
+   --animation-delay: 0.2s;
+ }
+ 
+ .promo__logo-2 {
+   --animation-delay: 0.4s;
+ }
+ 
+ .promo__logo-3 {
+   --animation-delay: 0.6s;
+ }
+ 
+ .promo__logo-4 {
+   --animation-delay: 0.8s;
+ }
+
 
 @import "mobile";
