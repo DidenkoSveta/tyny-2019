@@ -8,13 +8,21 @@
    font-size: 29px;
 }
 
+.header__logo-mb {
+   display: none;
+}
+
 .header__menu {
+   display: flex;
+   justify-content: space-between;
+   width: 900px;
+   transform:translateX(-48px);
    &-list {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
       align-items: center;
-      width: 543px;
+      width: 570px;
    }
 }
 
@@ -31,6 +39,10 @@
    color: $white-blue;
    padding: 8px 30px;
    border: solid 1px $white-blue;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   // transform:translateX(0px);
 }
 
 .header__register-link:hover {
@@ -42,7 +54,7 @@
 
 .header__social {
    display: flex;
-   gap: 10px;
+   gap: 12px;
 }
 
 .header__social-link:hover {
@@ -56,7 +68,31 @@
    width: 1px;
    height: 42px;
    background-color: #c4c4c4;
-   margin-right: -24px;
+   margin-right: -12px;
+}
+
+.header__burger,
+.header__close {
+   display: none;
+   position: absolute;
+   width: 25px;
+   height: 21px;
+   background-size: contain;
+   background-repeat: no-repeat;
+   border: none;
+   z-index: 11;
+   cursor: pointer;
+   background-color: $white;
+   right: 28px;
+}
+
+.header__burger {
+   background-image: url("../images/icons/menu-burger.svg");
+}
+
+.header__close {
+   top: 26px;
+   background-image: url("../images/icons/close-burger.svg");
 }
 
 .footer__container {
@@ -189,7 +225,7 @@
    align-items: flex-start;
    justify-content: space-between;
    width: 1240px;
-   padding: 12px 50px;
+   padding: 0px 40px;
    color: $white;
 }
 
@@ -197,20 +233,21 @@
    max-width: 540px;
    display: flex;
    flex-direction: column;
-   gap: 40px;
+   gap: 50px;
 }
 
 .promo__inner {
    position: relative;
    display: flex;
    flex-direction: column;
-   gap: 30px;
+   gap: 20px;
 }
 
 .promo__title {
    font-size: 100px;
-   font-weight: 700;
-   line-height: 90%;
+   font-weight: 500;
+   line-height: 85%;
+   letter-spacing: 0.02em;
 }
 
 .promo__date {
@@ -218,6 +255,11 @@
    font-style: normal;
    font-weight: 300;
    line-height: 190%;
+   letter-spacing: normal;
+}
+
+.promo__date-piece {
+   margin-left: 10px;
 }
 
 .promo__subtitle {
@@ -229,19 +271,20 @@
    line-height: 90%;
    letter-spacing: -0.92px;
    transform: rotate(-90deg);
-   left: -180px;
-   top: 148px;
+   left: -170px;
+   top: 140px;
 }
 
 .promo__logos {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   max-width: 445px;
+   max-width: 460px;
 }
 
 .promo__cta-button {
    display: inline-block;
+   margin-top: 15px;
    width: 423px;
    height: 71px;
    padding: 26px 50px;
@@ -368,11 +411,22 @@
          height: 85px;
          width: 28px;
          opacity: 0.6;
+         
+         // transform: translateY(50px);
       }
+   }
+
+   .swiper-button-prev, 
+   .swiper-button-next {
+      margin-top: 20px;
    }
 
    .swiper-button-prev {
       transform: rotate(180deg);
+   }
+
+   .swiper-button-next {
+      right: 30px;
    }
 
    .swiper-button-next:hover,

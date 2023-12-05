@@ -22,49 +22,67 @@ const swiper = new Swiper('.swiper-container', {
    const form = document.querySelector('.contact__form-grid');
    
    form.addEventListener('submit', function(event) {
-     event.preventDefault(); // Предотвращаем стандартную отправку формы
-     const name = form.querySelector('#contact-name').value.trim();
-     const email = form.querySelector('#contact-email').value.trim();
-     const message = form.querySelector('#subject').value.trim();
-     
+     event.preventDefault(); // Отменяем стандартное поведение формы
+ 
      let isValid = true;
+     const nameInput = form.querySelector('#contact-name');
+     const emailInput = form.querySelector('#contact-email');
+     const messageTextArea = form.querySelector('#subject');
  
      // Валидация имени
-     if (name === '') {
+     if (nameInput.value.trim() === '') {
        isValid = false;
-       form.querySelector('#contact-name').classList.add('invalid');
+       nameInput.classList.add('invalid');
      } else {
-       form.querySelector('#contact-name').classList.remove('invalid');
+       nameInput.classList.remove('invalid');
      }
  
      // Валидация email
-     if (!validateEmail(email)) {
+     if (!validateEmail(emailInput.value.trim())) {
        isValid = false;
-       form.querySelector('#contact-email').classList.add('invalid');
+       emailInput.classList.add('invalid');
      } else {
-       form.querySelector('#contact-email').classList.remove('invalid');
+       emailInput.classList.remove('invalid');
      }
  
      // Валидация сообщения
-     if (message === '') {
+     if (messageTextArea.value.trim() === '') {
        isValid = false;
-       form.querySelector('#subject').classList.add('invalid');
+       messageTextArea.classList.add('invalid');
      } else {
-       form.querySelector('#subject').classList.remove('invalid');
+       messageTextArea.classList.remove('invalid');
      }
  
-     // Если форма валидна, логируем данные и отправляем форму
+     // Логирование данных, если все поля валидны
      if (isValid) {
-       console.log('Name:', name);
-       console.log('Email:', email);
-       console.log('Message:', message);
-       // Здесь можно вызвать form.submit(), если нужно отправить форму на сервер
+       console.log('Name:', nameInput.value);
+       console.log('Email:', emailInput.value);
+       console.log('Message:', messageTextArea.value);
+       // form.submit(); // Раскомментируйте для отправки формы
      }
    });
  
    function validateEmail(email) {
      const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
      return re.test(String(email).toLowerCase());
+   }
+ });
+ 
+
+ //burger menu
+ let menuOpenButton = document.querySelector('.header__burger');
+ let menu = document.querySelector('.header__menu');
+ let menuCloseButton = document.querySelector('.header__close');
+ 
+ menuOpenButton.addEventListener('click', () => {
+   menu.classList.add('show');
+ });
+ 
+ document.addEventListener('click', (e) => {
+   if (e.target.classList.contains('header__close')
+       || !e.target.classList.contains('header__menu')
+       && !e.target.classList.contains('header__burger')) {
+     menu.classList.remove('show');
    }
  });
  

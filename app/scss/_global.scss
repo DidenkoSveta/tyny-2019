@@ -40,6 +40,7 @@ header {
 }
 
 .container {
+   position: relative;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -64,10 +65,12 @@ footer {
    padding: 139px 100px 100px;
 }
 
-.contact__input:invalid,
-.contact__textarea:invalid {
-  border: 2px solid red;
-}
+#contact-name.invalid,
+#contact-email.invalid,
+#subject.invalid {
+   border: 2px solid red;
+ }
+ 
 
 
 .promo {
@@ -76,6 +79,6 @@ footer {
    background-color: $blue;
    display: flex;
    justify-content: center;
-   padding: 69px 100px 162px;
+   padding: 34px 0px 162px 180px;
 }
 

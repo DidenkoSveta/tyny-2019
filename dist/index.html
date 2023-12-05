@@ -12,9 +12,12 @@
 <body>
    <div class="wrapper">
       <header class="header">
-         <div class="container">
+         <div class="container header__container">
             <a class="header__logo">TYNY 2019</a>
+            <button class="header__burger" aria-label="Toggle menu" aria-expanded="false"></button>
             <nav class="header__menu">
+               <a class="header__logo">TYNY 2019</a>
+               <button class="header__close" aria-label="Close menu"></button>
                <ul class="header__menu-list">
                   <li class="header__menu-item"><a class="header__menu-link" href="#">Конференция</a></li>
                   <li class="header__menu-item"><a class="header__menu-link" href="#">Программа</a></li>
@@ -22,12 +25,12 @@
                   <li class="header__menu-item"><a class="header__menu-link" href="#">Фото</a></li>
                   <li class="header__menu-item"><a class="header__menu-link" href="#">Материалы</a></li>
                </ul>
+               <a class="header__register-link" href="#">Регистрация</a>
+               <div class="header__social">
+                  <a class="header__social-link" href=""><img src="images/icons/mail.svg" alt="mail"></a>
+                  <a class="header__social-link" href=""><img src="images/icons/facebook.svg" alt="facebook"></a>
+               </div>
             </nav>
-            <a class="header__register-link" href="#">Регистрация</a>
-            <div class="header__social">
-               <a class="header__social-link" href=""><img src="images/icons/facebook.svg" alt="facebook"></a>
-               <a class="header__social-link" href=""><img src="images/icons/mail.svg" alt="mail"></a>
-            </div>
          </div>
       </header>
 <main>
@@ -36,7 +39,7 @@
          <div class="promo__preview">
             <div class="promo__inner">
                <h1 class="promo__title">
-                  <span class="promo__date">12 ноября</span> <br> This Year Next Year
+                  <span class="promo__date">12 ноября</span> <br> This Year <span class="promo__date-piece">Next Year</span> 
                </h1>
                <p class="promo__subtitle">Конференция</p>
                <div class="promo__logos">
@@ -148,6 +151,7 @@
                   </div>
                </div>
             </div>
+            <div class="swiper-button"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
             <div class="swiper-pagination"></div>
